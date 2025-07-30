@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reason #1</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 50px;
+    }
+
+    p {
+      	font-size: 1.5em;
+  	max-width: 700px;
+  	padding: 0 1em;
+	text-align: center;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 0 1em;
+	
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 15px;
+      background-color: #ff6f61;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e65c50;
+    }
+
+    .mascot {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 130px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Reason #1</h1>
+    <p>You're incredibly smart and talented — and every time I see it, it strengthens my belief that you can achieve <em>anything</em> you set your mind to. 💡🌟</p>
+
+  <div style="margin-top: 20px;">
+    <button class="btn" onclick="goToNext()">Next Reason</button>
+  </div>
+
+  <!-- Confetti Script (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const goToNext = () => {
+      window.location.href = "reason2uno.html";
+    };
+
+    // Fire confetti when page loads
+    window.onload = () => {
+      const duration = 3 * 1000;
+      const animationEnd = Date.now() + duration;
+
+      const interval = setInterval(() => {
+        if (Date.now() > animationEnd) {
+          clearInterval(interval);
+        }
+        confetti({
+          particleCount: 50,
+          startVelocity: 30,
+          spread: 360,
+          ticks: 60,
+          origin: {
+            x: Math.random(),
+            y: Math.random() - 0.2
+          }
+        });
+      }, 300);
+    };
+  </script>
+</body>
+</html>

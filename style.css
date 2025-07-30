@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe Script', cursive;
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a0f2c, #1d2d55, #4c6fa5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* You can adjust later pages to use lighter background gradients like this:
+   background: linear-gradient(to bottom, #1d2d55, #4c6fa5, #a5c0e0);
+*/
+
+h1 {
+  font-family: 'Segoe Script', cursive;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffb6c1;
+}
+
+h1::before,
+h1::after {
+  content: "💖";
+  margin: 0 10px;
+}
+
+p {
+  font-size: 1.5em;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+button {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 12px;
+  background-color: #ff8c00;
+  color: white;
+  cursor: pointer;
+  margin-top: 25px;
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffa733;
+}
+
+.mascot {
+  max-height: 120px;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+/* Confetti (optional addition later) */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(var(--hue), 100%, 50%);
+  animation: fall 3s linear infinite;
+  top: 0;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}

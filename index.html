@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Twenty Reasons Why I Love You</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, black, #1a1a2e);
+      color: #fdfdfd;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 20px 30px;
+      line-height: 1.4;
+      z-index: 2;
+    }
+
+    .heart {
+      font-size: 2rem;
+      margin: 0 10px;
+      animation: sparkle 2s infinite;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 20px 50px;
+      font-size: 1.8rem;
+      background-color: #ff6699;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+
+    .btn:hover {
+      background-color: #ff3366;
+      transform: scale(1.07);
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: hsl(var(--hue), 100%, 70%);
+      animation: confetti-fall linear infinite;
+    }
+
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti Background -->
+  <div class="confetti" id="confetti-container"></div>
+
+  <!-- Main Heading -->
+  <h1>
+    <span class="heart">✨</span><br />
+    Twenty Reasons Why I Love You<br />
+    <span class="heart">❤️</span>
+  </h1>
+
+  <!-- Go Button -->
+  <button class="btn" onclick="window.location.href='r1ex3.html'">Let’s goo!!</button>
+
+  <!-- Confetti Script -->
+  <script>
+    const confettiContainer = document.getElementById('confetti-container');
+    for (let i = 0; i < 100; i++) {
+      const piece = document.createElement('div');
+      piece.classList.add('confetti-piece');
+      piece.style.left = `${Math.random() * 100}%`;
+      piece.style.animationDuration = `${3 + Math.random() * 5}s`;
+      piece.style.animationDelay = `${Math.random() * 5}s`;
+      piece.style.setProperty('--hue', Math.floor(Math.random() * 360));
+      confettiContainer.appendChild(piece);
+    }
+  </script>
+</body>
+</html>

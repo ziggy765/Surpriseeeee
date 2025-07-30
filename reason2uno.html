@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reason #2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #004080, #337ab7, #80bfff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .content {
+      max-width: 700px;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: gold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      color: black;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      box-shadow: 2px 2px 10px #222;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ffcc00;
+    }
+
+    /* Confetti JS overlay */
+    canvas#confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="content">
+    <h1>💖 Reason #2 💛 💖</h1>
+    <p>Your kindness and generosity make the world — and my world — a better place. You have a way of making others feel seen, valued, and safe. That’s rare, and I love that about you.</p>
+    <div class="button-container">
+      <button class="button" onclick="location.href='r1ex3.html'">Previous</button>
+
+
+      <button class="button" onclick="location.href='reason3.html'">Next</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+  confetti({
+    particleCount: 120,
+    spread: 100,
+    origin: { y: 0.6 }
+  });
+</script>
