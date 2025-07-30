@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Handlee', cursive;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'), linear-gradient(to bottom right, #fef9f4, #f5e8d6);
+      background-size: cover;
+      background-repeat: repeat;
+      padding: 3em 1em;
+      color: #2f2f2f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .letter {
+      max-width: 700px;
+      padding: 2em;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .letter p {
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
+
+    .cake {
+      width: 100px;
+      margin-top: 1.5em;
+    }
+
+    .glitter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.3) 2%, transparent 40%),
+                  radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.2) 1%, transparent 60%),
+                  radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.2) 2%, transparent 40%);
+      animation: shimmer 5s infinite linear;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(100vw); }
+    }
+
+    .button {
+      margin-top: 2em;
+      padding: 0.8em 2em;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background-color: #d88bc4;
+      color: #fff;
+      cursor: pointer;
+      font-family: 'Comic Sans MS', cursive;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e3a2d2;
+    }
+  </style>
+</head>
+<body>
+  <div class="glitter"></div>
+  <div class="letter">
+    <p>
+      Happy Birthday love 💌🎂<br><br>
+      I just want you to know how lucky I feel to have met someone like you. You've brought warmth, light and joy into my life in the most unexpected ways.<br><br>
+      I hope I get to celebrate many, many more birthdays with you.<br><br>
+      <strong>Happy Happy Birthday
+
+From your biggest crush & greatest fan 💖💋</strong>
+    </p>
+    <img class="cake" src="https://cdn-icons-png.flaticon.com/512/994/994155.png" alt="Cake" />
+  </div>
+
+  <button class="button" onclick="location.href='indexfinal.html'">Back to Start</button>
+</body>
+</html>
